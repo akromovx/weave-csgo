@@ -1,0 +1,905 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\cheat.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\hooks.cpp">
+      <Filter>source\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\utils.cpp">
+      <Filter>source\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\displacement.cpp">
+      <Filter>source\helpers\displacement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render.cpp">
+      <Filter>source\helpers\render</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_demo.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_draw.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_freetype.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_impl_dx9.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_impl_win32.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_tables.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_widgets.cpp">
+      <Filter>deps\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\menu.cpp">
+      <Filter>source\features\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\movement.cpp">
+      <Filter>source\features\movement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vars.cpp">
+      <Filter>source\helpers\config</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\entities.cpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\engine_prediction.cpp">
+      <Filter>source\features\engine prediction</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\netvar_manager.cpp">
+      <Filter>source\game\sdk\netvar manager</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\datamap.cpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\math.cpp">
+      <Filter>source\utils\math</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\minhook\buffer.c">
+      <Filter>deps\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\minhook\hook.c">
+      <Filter>deps\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\minhook\trampoline.c">
+      <Filter>deps\minhook</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\minhook\hde\hde64.c">
+      <Filter>deps\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\minhook\hde\hde32.c">
+      <Filter>deps\minhook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\override_entity_list.cpp">
+      <Filter>source\game\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\players.cpp">
+      <Filter>source\game\entities\players</Filter>
+    </ClCompile>
+    <ClCompile Include="src\globals.cpp">
+      <Filter>source\helpers\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\lag_compensation.cpp">
+      <Filter>source\game\entities\players\lag compensation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\events.cpp">
+      <Filter>source\helpers\events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\glow_esp.cpp">
+      <Filter>source\features\visuals\glow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\dormant.cpp">
+      <Filter>source\features\visuals\esp\dormant</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\esp_utils.cpp">
+      <Filter>source\features\visuals\esp\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\ragebot.cpp">
+      <Filter>source\features\hvh\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\hotkeys.cpp">
+      <Filter>source\helpers\hotkeys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\exploits.cpp">
+      <Filter>source\features\hvh\exploits</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\checksum_crc.cpp">
+      <Filter>source\game\sdk\checksum_crc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\chams.cpp">
+      <Filter>source\features\visuals\chams</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\misc.cpp">
+      <Filter>source\features\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\hvh_utils.cpp">
+      <Filter>source\features\hvh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\interfaces.cpp">
+      <Filter>source\helpers\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\client_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\client_mode_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\client_state_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\directx_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\engine_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\model_render_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\player_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\prediction_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\v_panel_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\wnd_proc.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\player_esp.cpp">
+      <Filter>source\features\visuals\esp\players</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\inventory.cpp">
+      <Filter>source\game\inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\weapons.cpp">
+      <Filter>source\game\entities\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\weapon_esp.cpp">
+      <Filter>source\features\visuals\esp\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\grenades.cpp">
+      <Filter>source\game\entities\grenades</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\grenade_esp.cpp">
+      <Filter>source\features\visuals\esp\grenades</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\grenade_prediction.cpp">
+      <Filter>source\features\grenade prediction</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\bullets.cpp">
+      <Filter>source\features\visuals\bullets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\misc_hooks.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\local_esp.cpp">
+      <Filter>source\features\visuals\esp\local</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\antiaim.cpp">
+      <Filter>source\features\hvh\antiaim</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\fakelag.cpp">
+      <Filter>source\features\hvh\antiaim</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\movement_hook.cpp">
+      <Filter>source\hooks\tables</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\autowall.cpp">
+      <Filter>source\features\hvh\autowall</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\hitchance.cpp">
+      <Filter>source\features\hvh\aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\indicators.cpp">
+      <Filter>source\features\visuals\indicators</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\sounds.cpp">
+      <Filter>source\utils\sounds</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\md5.cpp">
+      <Filter>source\utils\md5</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\animation_handler.cpp">
+      <Filter>source\utils\animation handler</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\threading.cpp">
+      <Filter>source\helpers\threading</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\peek_state.cpp">
+      <Filter>source\features\hvh\peek_state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\net_data.cpp">
+      <Filter>source\features\engine prediction\net data</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\voice_channel.cpp">
+      <Filter>source\game\network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\custom_animations.cpp">
+      <Filter>source\game\entities\players\lag compensation\custom animations</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\logs.cpp">
+      <Filter>source\features\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\hvh\resolver.cpp">
+      <Filter>source\features\hvh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\visuals\skin_changer.cpp">
+      <Filter>source\features\visuals\skins</Filter>
+    </ClCompile>
+    <ClCompile Include="sdk\recv_props.cpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\features\bullet_impacts.cpp">
+      <Filter>source\features\hvh</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\weave-gui\containers\containers.cpp" />
+    <ClCompile Include="deps\weave-gui\controls\controls.cpp" />
+    <ClCompile Include="deps\weave-gui\gui.cpp" />
+    <ClCompile Include="deps\weave-gui\instance\window.cpp" />
+    <ClCompile Include="deps\weave-gui\messagebox.cpp" />
+    <ClCompile Include="deps\weave-gui\popups\popups.cpp" />
+    <ClCompile Include="deps\weave-gui\renderable.cpp" />
+    <ClCompile Include="deps\weave-gui\resources.cpp" />
+    <ClCompile Include="deps\weave-gui\shapes\shapes.cpp" />
+    <ClCompile Include="deps\weave-gui\style.cpp" />
+    <ClCompile Include="src\features\newmenu.cpp" />
+    <ClCompile Include="src\features\network.cpp" />
+    <ClCompile Include="src\blur\blur.cpp" />
+    <ClCompile Include="src\features\discord.cpp" />
+    <ClCompile Include="src\features\visuals\hitmarker.cpp" />
+    <ClCompile Include="src\utils\sha2.cpp" />
+    <ClCompile Include="src\features\localization.cpp" />
+    <ClCompile Include="src\features\knifebot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\cheat.hpp">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base_includes.hpp">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\hooks.hpp">
+      <Filter>source\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\utils.hpp">
+      <Filter>source\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\displacement.hpp">
+      <Filter>source\helpers\displacement</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\client.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\client_class.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\recv_props.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\address.hpp">
+      <Filter>source\utils\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render.hpp">
+      <Filter>source\helpers\render</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\animation_layer.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\input.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imconfig.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_freetype.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_impl_dx9.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_impl_win32.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_internal.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_rectpack.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_textedit.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_truetype.h">
+      <Filter>deps\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\menu.hpp">
+      <Filter>source\features\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\client_state.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\engine_client.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\net_channel.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\globals.hpp">
+      <Filter>source\helpers\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\surface.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\entities.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\entity_list.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\movement.hpp">
+      <Filter>source\features\movement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vars.hpp">
+      <Filter>source\helpers\config</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\physics_surface_props.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\convar.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\global_vars.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\vpanel.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\debug_overlay.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\prediction.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\move_helper.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\game_movement.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\engine_prediction.hpp">
+      <Filter>source\features\engine prediction</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\netvar_manager.hpp">
+      <Filter>source\game\sdk\netvar manager</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\datamap.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\vector.hpp">
+      <Filter>source\utils\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\math.hpp">
+      <Filter>source\utils\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\matrix.hpp">
+      <Filter>source\utils\math</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\animation_state.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\buffer.h">
+      <Filter>deps\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\MinHook.h">
+      <Filter>deps\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\trampoline.h">
+      <Filter>deps\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\hde\hde64.h">
+      <Filter>deps\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\hde\pstdint.h">
+      <Filter>deps\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\hde\table32.h">
+      <Filter>deps\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\hde\table64.h">
+      <Filter>deps\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\minhook\hde\hde32.h">
+      <Filter>deps\minhook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\override_entity_list.hpp">
+      <Filter>source\game\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\class_id.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\engine_sound.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\smallest_pixel_7.h">
+      <Filter>bytes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\model_info.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\players.hpp">
+      <Filter>source\game\entities\players</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\engine_trace.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\bspflags.h">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\trace_define.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\localize.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\game_events.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\events.hpp">
+      <Filter>source\helpers\events</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\glow_manager.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\glow_esp.hpp">
+      <Filter>source\features\visuals\glow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\dormant.hpp">
+      <Filter>source\features\visuals\esp\dormant</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\easings.hpp">
+      <Filter>source\features\visuals\esp\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\esp_utils.hpp">
+      <Filter>source\features\visuals\esp\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\hvh\hvh.hpp">
+      <Filter>source\features\hvh</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\root_ui_bold.h">
+      <Filter>bytes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\hotkeys.hpp">
+      <Filter>source\helpers\hotkeys</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\hvh\exploits.hpp">
+      <Filter>source\features\hvh\exploits</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\checksum_crc.h">
+      <Filter>source\game\sdk\checksum_crc</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\json\json.hpp">
+      <Filter>deps\json</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\model_render.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\material_system.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\chams.hpp">
+      <Filter>source\features\visuals\chams</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\studio_render.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\misc.hpp">
+      <Filter>source\features\misc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\interfaces.hpp">
+      <Filter>source\helpers\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\game_rules.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\bits.hpp">
+      <Filter>source\utils\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\color.hpp">
+      <Filter>source\utils\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\ofs_vector.hpp">
+      <Filter>source\utils\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\player_esp.hpp">
+      <Filter>source\features\visuals\esp\players</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\base_handle.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\inventory.hpp">
+      <Filter>source\game\inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\weapons.hpp">
+      <Filter>source\game\entities\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\weapon_esp.hpp">
+      <Filter>source\features\visuals\esp\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\grenades.hpp">
+      <Filter>source\game\entities\grenades</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\grenade_esp.hpp">
+      <Filter>source\features\visuals\esp\grenades</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dump.hpp">
+      <Filter>source\helpers\displacement</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\grenade_prediction.hpp">
+      <Filter>source\features\grenade prediction</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\weapon_icons.h">
+      <Filter>bytes</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\include.hpp">
+      <Filter>bytes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\bullets.hpp">
+      <Filter>source\features\visuals\bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\local_esp.hpp">
+      <Filter>source\features\visuals\esp\local</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\i_mem_alloc.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\hvh\autowall.hpp">
+      <Filter>source\features\hvh\autowall</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\indicators.hpp">
+      <Filter>source\features\visuals\indicators</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\esp.hpp">
+      <Filter>source\features\visuals\esp</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\hitsound\hit1.h">
+      <Filter>bytes\hitsound</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\hitsound\hit2.h">
+      <Filter>bytes\hitsound</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\hitsound\hit3.h">
+      <Filter>bytes\hitsound</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes\hitsound\hit4.h">
+      <Filter>bytes\hitsound</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\sounds.hpp">
+      <Filter>source\utils\sounds</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\md5.hpp">
+      <Filter>source\utils\md5</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\animation_handler.hpp">
+      <Filter>source\utils\animation handler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\fnva1.hpp">
+      <Filter>source\utils\hash</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\hooker.hpp">
+      <Filter>source\utils\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\vmt.hpp">
+      <Filter>source\utils\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\obfuscation.hpp">
+      <Filter>source\utils\obfuscation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\threading.hpp">
+      <Filter>source\helpers\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\render_view.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\hvh\peek_state.hpp">
+      <Filter>source\features\hvh\peek_state</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\model_cache.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\net_data.hpp">
+      <Filter>source\features\engine prediction\net data</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\voice_channel.hpp">
+      <Filter>source\game\network</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\custom_animations.hpp">
+      <Filter>source\game\entities\players\lag compensation\custom animations</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\logs.hpp">
+      <Filter>source\features\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\beams.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\constexpr_rand.hpp">
+      <Filter>source\utils\obfuscation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\macros.hpp">
+      <Filter>source\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\features\visuals\skin_changer.hpp">
+      <Filter>source\features\visuals\skins</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\net_string_container.hpp">
+      <Filter>source\game\sdk\classes</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\json\json_fwd.hpp">
+      <Filter>deps\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\encoding.hpp" />
+    <ClInclude Include="deps\weave-gui\container.hpp" />
+    <ClInclude Include="deps\weave-gui\containers\containers.hpp" />
+    <ClInclude Include="deps\weave-gui\controls\controls.hpp" />
+    <ClInclude Include="deps\weave-gui\gui.hpp" />
+    <ClInclude Include="deps\weave-gui\include.hpp" />
+    <ClInclude Include="deps\weave-gui\instance\window.hpp" />
+    <ClInclude Include="deps\weave-gui\instance.hpp" />
+    <ClInclude Include="deps\weave-gui\messagebox.hpp" />
+    <ClInclude Include="deps\weave-gui\popups\popups.hpp" />
+    <ClInclude Include="deps\weave-gui\renderable.hpp" />
+    <ClInclude Include="deps\weave-gui\render_wrapper.hpp" />
+    <ClInclude Include="deps\weave-gui\resources.hpp" />
+    <ClInclude Include="deps\weave-gui\shapes\shapes.hpp" />
+    <ClInclude Include="deps\weave-gui\style.hpp" />
+    <ClInclude Include="deps\weave-gui\utils\common.hpp" />
+    <ClInclude Include="deps\weave-gui\utils\enums.hpp" />
+    <ClInclude Include="deps\weave-gui\utils\macros.hpp" />
+    <ClInclude Include="src\features\newmenu.hpp" />
+    <ClInclude Include="src\features\network.hpp" />
+    <ClInclude Include="src\blur\blur.hpp" />
+    <ClInclude Include="sdk\item_definitions.hpp" />
+    <ClInclude Include="deps\stb\stb_image.h" />
+    <ClInclude Include="src\features\discord.hpp" />
+    <ClInclude Include="src\features\visuals\hitmarker.hpp" />
+    <ClInclude Include="src\utils\nt.hpp" />
+    <ClInclude Include="src\utils\sha2.hpp" />
+    <ClInclude Include="sdk\ik_solver.hpp" />
+    <ClInclude Include="src\features\localization.hpp" />
+    <ClInclude Include="src\features\knifebot.hpp" />
+    <ClInclude Include="deps\fontawesome\include.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="deps">
+      <UniqueIdentifier>{d09167e3-458d-44ad-8849-fccfc7307767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\imgui">
+      <UniqueIdentifier>{960719bb-3122-45e9-8906-666dadde1e1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\minhook">
+      <UniqueIdentifier>{dfb32b90-d003-4bd1-a6ab-75c79b2758f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\minhook\hde">
+      <UniqueIdentifier>{cfb6d219-582a-4c01-97c1-4af73380f7cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bytes">
+      <UniqueIdentifier>{f7f795d0-0275-4605-b77d-30ce140d7eb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deps\json">
+      <UniqueIdentifier>{9ff4c173-f41b-4291-884d-48c546134508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{67253344-ffc3-4fef-89d8-479f6dbe87dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\hooks">
+      <UniqueIdentifier>{a693d34b-607f-4324-89d5-428f27b79bbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils">
+      <UniqueIdentifier>{143aa4d6-e90f-47a6-ad47-8a37281c4ee1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\memory">
+      <UniqueIdentifier>{4ba28e62-cb96-4bbf-bc32-7e6156799756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\math">
+      <UniqueIdentifier>{642e472a-6635-46c1-8776-13d8de9380c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers">
+      <UniqueIdentifier>{6cab67ab-eddd-457c-bac1-b5481ca71376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\render">
+      <UniqueIdentifier>{8e2480d4-1b60-4d53-a783-b21054dbbdc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\displacement">
+      <UniqueIdentifier>{d42d3775-6ef5-4ba0-aad6-82694ca1ceb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\config">
+      <UniqueIdentifier>{126598a8-adfc-41eb-8f96-1db8645d8da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\events">
+      <UniqueIdentifier>{f58aba52-a04e-477b-81cd-ab05732f4385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\hotkeys">
+      <UniqueIdentifier>{05de134e-8b35-49d2-881c-8cb9c28da6b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\globals">
+      <UniqueIdentifier>{06f0ddc6-492a-4ec4-803a-63c6705597e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\interfaces">
+      <UniqueIdentifier>{363571e1-8490-4318-a636-c9340f5bcd16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game">
+      <UniqueIdentifier>{645fdb8c-f9f5-40bb-8784-7b3c0d4ef628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\entities">
+      <UniqueIdentifier>{54d69193-1e4f-4a40-9594-50461094e592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\entities\players">
+      <UniqueIdentifier>{702e32f5-2bfc-4dc1-98bc-50f096df45b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\entities\players\lag compensation">
+      <UniqueIdentifier>{f9d2c681-e4ec-4a2a-9d7f-c8505a0a1050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\sdk">
+      <UniqueIdentifier>{6881ffe7-4596-4d5e-8633-557745cd7759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\sdk\classes">
+      <UniqueIdentifier>{3dc34848-fd39-457c-8c6d-ba3d446d33c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\sdk\netvar manager">
+      <UniqueIdentifier>{930c5a0d-59d7-42e2-9e88-b58d4a3b6d6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\sdk\checksum_crc">
+      <UniqueIdentifier>{51d0a5b7-2b8f-4995-a1a7-b503e7f4e605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\hooks\tables">
+      <UniqueIdentifier>{bd76bfab-5868-4af1-94e9-ad23068bffff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\structures">
+      <UniqueIdentifier>{dd087bee-6278-49c3-94c5-065dcd6d80bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features">
+      <UniqueIdentifier>{ccf54a8d-0e2b-4542-b2e5-5de06332a761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\movement">
+      <UniqueIdentifier>{e555adfd-6715-400c-81e7-bd2e94ff19dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\menu">
+      <UniqueIdentifier>{c00f720a-931f-42db-8e05-1d33f2bb28f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\hvh">
+      <UniqueIdentifier>{907934af-326e-411f-8325-efc191458d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\hvh\aimbot">
+      <UniqueIdentifier>{799a6369-1cea-4d62-9f70-b9182956d00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\hvh\exploits">
+      <UniqueIdentifier>{b41880c3-9dfc-4d3e-ab98-88f57a6a609f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\misc">
+      <UniqueIdentifier>{f8192599-b5c7-469a-ab76-804ed7ffdc8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\entities\weapons">
+      <UniqueIdentifier>{708a6ee4-9d92-4a49-82cc-76d85779257d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\entities\grenades">
+      <UniqueIdentifier>{cf019ae4-b604-4228-ad3b-cc1515bbfa74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\engine prediction">
+      <UniqueIdentifier>{d19a908f-c23a-445f-86cf-ee07da213ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\grenade prediction">
+      <UniqueIdentifier>{67bd6224-fe02-446a-b99a-d43fdccabe6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals">
+      <UniqueIdentifier>{262cd543-7d47-464d-a987-3ff1a6f6616b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp">
+      <UniqueIdentifier>{79cfbd09-ee61-4898-ab4f-c06b14b1b858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp\dormant">
+      <UniqueIdentifier>{4d448482-9c6f-4abe-8506-1a28b943a8cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp\utils">
+      <UniqueIdentifier>{f65a37a9-d679-4585-8ea6-10935b64bfe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp\players">
+      <UniqueIdentifier>{4a73bf4c-6076-4ae3-a2e0-417b5801e87e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp\weapons">
+      <UniqueIdentifier>{c02329da-8c82-4d81-927b-e48fa07b7aee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp\grenades">
+      <UniqueIdentifier>{cfa4fcec-1c9a-4d23-8d8f-809d57bab046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\chams">
+      <UniqueIdentifier>{da332031-3cbc-4c8f-8ca2-315caeb852fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\glow">
+      <UniqueIdentifier>{a871e7ec-88ac-41a1-82f3-5fd823c89759}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\bullets">
+      <UniqueIdentifier>{008883d7-5b29-4de6-8363-c4cf2c6bb6e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\hvh\antiaim">
+      <UniqueIdentifier>{d069a15c-fe93-42d9-adb3-11035bfb1348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\hvh\autowall">
+      <UniqueIdentifier>{417491f3-f7a2-4c31-904f-2d39a858f58f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\indicators">
+      <UniqueIdentifier>{fc5576f2-4ccd-4a3a-844d-81cb24f00ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\esp\local">
+      <UniqueIdentifier>{9b1f8273-84df-46f0-bd19-1b1bb48583c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bytes\hitsound">
+      <UniqueIdentifier>{bd031934-a4b1-4c40-8cfb-b761cf198cee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\sounds">
+      <UniqueIdentifier>{5b5950d0-ead1-4b78-9ad3-ce7d135806c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\md5">
+      <UniqueIdentifier>{51aacb54-ce7c-44c7-86ff-8bd25b9f7679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\animation handler">
+      <UniqueIdentifier>{d7d7191c-eeec-490f-af77-e18df559b285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\hash">
+      <UniqueIdentifier>{7855cc9d-dec9-4b1c-a910-938f13885563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\hooks">
+      <UniqueIdentifier>{68beb08d-cac9-41e6-b207-9ca6d67d5f62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\obfuscation">
+      <UniqueIdentifier>{821f9085-cb59-4383-8597-36b6a67d9572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\helpers\threading">
+      <UniqueIdentifier>{140140a3-4882-40b4-aa7f-1e2861fdf9f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\logger">
+      <UniqueIdentifier>{9ac068f4-9cad-47e3-abcd-131c3286290f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\hvh\peek_state">
+      <UniqueIdentifier>{7b838210-2a4e-405e-ba18-c9e03f5c217f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\engine prediction\net data">
+      <UniqueIdentifier>{381553cd-fce5-4ab6-a900-81c8c7235a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\network">
+      <UniqueIdentifier>{691ba8e0-d75c-4b41-ad37-a25518afcfa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\entities\players\lag compensation\custom animations">
+      <UniqueIdentifier>{b7ea0c81-b4f5-4d7f-b340-2ad1f58ff45e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\game\inventory">
+      <UniqueIdentifier>{a060a472-a1cb-4c4e-95d2-d2ac5af8ae74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\features\visuals\skins">
+      <UniqueIdentifier>{9d7c0afc-16cc-4ec6-97ce-60521cff5b5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\blur\Shaders\blur_y.hlsl" />
+    <FxCompile Include="src\blur\Shaders\blur_x.hlsl" />
+    <FxCompile Include="src\blur\Shaders\glow_line.hlsl" />
+    <FxCompile Include="src\blur\Shaders\default_vs.hlsl" />
+  </ItemGroup>
+</Project>

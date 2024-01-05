@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unprotected|Win32">
+      <Configuration>Unprotected</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Unprotected|x64">
+      <Configuration>Unprotected</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6c8a0bdb-e377-4741-8894-cbb4dd5dd7a7}</ProjectGuid>
+    <RootNamespace>csgosln</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>csgo_internal</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <LLVMToolsVersion>13.0.1</LLVMToolsVersion>
+    <EnableASAN>false</EnableASAN>
+    <EnableFuzzer>false</EnableFuzzer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Directxsdk\Include;$(SolutionDir)/csgo_internal/deps/freetype/include/;$(IncludePath);C:\vcpkg\installed\x86-windows-static\include;C:\luajit\src</IncludePath>
+    <LibraryPath>D:\Directxsdk\Lib\x86;$(SolutionDir)/csgo_internal/deps/freetype;C:\vcpkg\installed\x86-windows-static\debug\lib;C:\luajit\lib\debug;$(LibraryPath)</LibraryPath>
+    <MultiProcFXC>true</MultiProcFXC>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\Directxsdk\Include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(SolutionDir)/csgo_internal/deps/freetype/include;$(IncludePath);C:\vcpkg\installed\x86-windows-static\include;C:\luajit\src;C:\vcpkg\installed\x86-windows-static-md\include</IncludePath>
+    <LibraryPath>D:\Directxsdk\Lib\x86;$(SolutionDir)/csgo_internal/deps/freetype;C:\vcpkg\installed\x86-windows-static\lib;C:\vcpkg\installed\x86-windows-static-md\lib;C:\luajit\lib\release;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(SolutionDir)/csgo_internal/deps/freetype/include;$(IncludePath);C:\Users\admin\Desktop\vcpkg\vcpkg\installed\x86-windows-static\include</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(SolutionDir)/csgo_internal/deps/freetype;C:\Users\admin\Desktop\vcpkg\vcpkg\installed\x86-windows-static\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;CSGOSLN_EXPORTS;_WINDOWS;_USRDLL;IMGUI_DEFINE_MATH_OPERATORS;IMGUI_USE_BGRA_PACKED_COLOR;__NO_OBF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ModuleOutputFile>$(IntDir)</ModuleOutputFile>
+      <ModuleDependenciesFile>$(IntDir)</ModuleDependenciesFile>
+      <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
+      <SourceDependenciesFile>$(IntDir)</SourceDependenciesFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalOptions>/NODEFAULTLIB:library </AdditionalOptions>
+    </Link>
+    <FxCompile>
+      <ShaderModel>4.0_level_9_3</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;CSGOSLN_EXPORTS;_WINDOWS;_USRDLL;IMGUI_DEFINE_MATH_OPERATORS;IMGUI_USE_BGRA_PACKED_COLOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalOptions>/EHsc %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <Optimization>MaxSpeed</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile />
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;CSGOSLN_EXPORTS;_WINDOWS;_USRDLL;IMGUI_DEFINE_MATH_OPERATORS;IMGUI_USE_BGRA_PACKED_COLOR;__NO_OBF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <ExceptionHandling>false</ExceptionHandling>
+      <AdditionalOptions>/EHsc %(AdditionalOptions)</AdditionalOptions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <AdditionalOptions>/NODEFAULTLIB:library %(AdditionalOptions)</AdditionalOptions>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;CSGOSLN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;CSGOSLN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unprotected|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;CSGOSLN_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="deps\weave-gui\containers\containers.cpp" />
+    <ClCompile Include="deps\weave-gui\controls\controls.cpp" />
+    <ClCompile Include="deps\weave-gui\gui.cpp" />
+    <ClCompile Include="deps\weave-gui\instance\window.cpp" />
+    <ClCompile Include="deps\weave-gui\messagebox.cpp" />
+    <ClCompile Include="deps\weave-gui\popups\popups.cpp" />
+    <ClCompile Include="deps\weave-gui\renderable.cpp" />
+    <ClCompile Include="deps\weave-gui\resources.cpp" />
+    <ClCompile Include="deps\weave-gui\shapes\shapes.cpp" />
+    <ClCompile Include="deps\weave-gui\style.cpp" />
+    <ClCompile Include="src\blur\blur.cpp" />
+    <ClCompile Include="src\features\discord.cpp" />
+    <ClCompile Include="src\features\knifebot.cpp" />
+    <ClCompile Include="src\features\localization.cpp" />
+    <ClCompile Include="src\features\newmenu.cpp" />
+    <ClCompile Include="src\features\network.cpp" />
+    <ClCompile Include="src\features\visuals\hitmarker.cpp" />
+    <ClCompile Include="src\utils\animation_handler.cpp" />
+    <ClCompile Include="src\features\hvh\antiaim.cpp" />
+    <ClCompile Include="src\features\hvh\autowall.cpp" />
+    <ClCompile Include="src\features\visuals\bullets.cpp" />
+    <ClCompile Include="src\features\visuals\chams.cpp" />
+    <ClCompile Include="src\cheat.cpp" />
+    <ClCompile Include="sdk\checksum_crc.cpp" />
+    <ClCompile Include="src\hooks\client_hook.cpp" />
+    <ClCompile Include="src\hooks\client_state_hook.cpp" />
+    <ClCompile Include="src\features\visuals\logs.cpp" />
+    <ClCompile Include="src\game\custom_animations.cpp" />
+    <ClCompile Include="deps\minhook\buffer.c" />
+    <ClCompile Include="deps\minhook\hde\hde32.c" />
+    <ClCompile Include="deps\minhook\hde\hde64.c" />
+    <ClCompile Include="deps\minhook\hook.c" />
+    <ClCompile Include="deps\minhook\trampoline.c" />
+    <ClCompile Include="src\game\dormant.cpp" />
+    <ClCompile Include="sdk\entities.cpp" />
+    <ClCompile Include="sdk\datamap.cpp" />
+    <ClCompile Include="deps\imgui\imgui.cpp" />
+    <ClCompile Include="deps\imgui\imgui_demo.cpp" />
+    <ClCompile Include="deps\imgui\imgui_draw.cpp" />
+    <ClCompile Include="deps\imgui\imgui_freetype.cpp" />
+    <ClCompile Include="deps\imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="deps\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="deps\imgui\imgui_tables.cpp" />
+    <ClCompile Include="deps\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\hooks\directx_hook.cpp" />
+    <ClCompile Include="src\utils\displacement.cpp" />
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\hooks\engine_hook.cpp" />
+    <ClCompile Include="src\game\engine_prediction.cpp" />
+    <ClCompile Include="src\features\visuals\esp_utils.cpp" />
+    <ClCompile Include="src\game\events.cpp" />
+    <ClCompile Include="src\features\hvh\fakelag.cpp" />
+    <ClCompile Include="src\globals.cpp" />
+    <ClCompile Include="src\features\visuals\glow_esp.cpp" />
+    <ClCompile Include="src\game\grenades.cpp" />
+    <ClCompile Include="src\features\visuals\grenade_esp.cpp" />
+    <ClCompile Include="src\game\grenade_prediction.cpp" />
+    <ClCompile Include="src\features\hvh\hitchance.cpp" />
+    <ClCompile Include="src\hooks\hooks.cpp" />
+    <ClCompile Include="src\utils\hotkeys.cpp" />
+    <ClCompile Include="src\features\hvh\hvh_utils.cpp" />
+    <ClCompile Include="src\features\visuals\indicators.cpp" />
+    <ClCompile Include="src\interfaces.cpp" />
+    <ClCompile Include="src\hooks\client_mode_hook.cpp" />
+    <ClCompile Include="src\game\inventory.cpp" />
+    <ClCompile Include="src\game\lag_compensation.cpp" />
+    <ClCompile Include="src\features\visuals\local_esp.cpp" />
+    <ClCompile Include="src\utils\math.cpp" />
+    <ClCompile Include="src\utils\md5.cpp" />
+    <ClCompile Include="src\features\menu.cpp" />
+    <ClCompile Include="src\features\misc.cpp" />
+    <ClCompile Include="src\hooks\misc_hooks.cpp" />
+    <ClCompile Include="src\hooks\model_render_hook.cpp" />
+    <ClCompile Include="src\features\movement.cpp" />
+    <ClCompile Include="src\hooks\movement_hook.cpp" />
+    <ClCompile Include="src\game\netvar_manager.cpp" />
+    <ClCompile Include="src\game\voice_channel.cpp" />
+    <ClCompile Include="src\game\net_data.cpp" />
+    <ClCompile Include="src\game\override_entity_list.cpp" />
+    <ClCompile Include="src\features\hvh\peek_state.cpp" />
+    <ClCompile Include="src\hooks\prediction_hook.cpp" />
+    <ClCompile Include="src\features\hvh\ragebot.cpp" />
+    <ClCompile Include="src\features\hvh\exploits.cpp" />
+    <ClCompile Include="src\features\bullet_impacts.cpp" />
+    <ClCompile Include="sdk\recv_props.cpp" />
+    <ClCompile Include="src\features\hvh\resolver.cpp" />
+    <ClCompile Include="src\features\visuals\skin_changer.cpp" />
+    <ClCompile Include="src\utils\sha2.cpp" />
+    <ClCompile Include="src\utils\sounds.cpp" />
+    <ClCompile Include="src\utils\threading.cpp" />
+    <ClCompile Include="src\hooks\v_panel_hook.cpp" />
+    <ClCompile Include="src\game\players.cpp" />
+    <ClCompile Include="src\features\visuals\player_esp.cpp" />
+    <ClCompile Include="src\hooks\player_hook.cpp" />
+    <ClCompile Include="src\render.cpp" />
+    <ClCompile Include="src\utils\utils.cpp" />
+    <ClCompile Include="src\vars.cpp" />
+    <ClCompile Include="src\game\weapons.cpp" />
+    <ClCompile Include="src\features\visuals\weapon_esp.cpp" />
+    <ClCompile Include="src\hooks\wnd_proc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deps\fontawesome\include.hpp" />
+    <ClInclude Include="deps\stb\stb_image.h" />
+    <ClInclude Include="deps\weave-gui\container.hpp" />
+    <ClInclude Include="deps\weave-gui\containers\containers.hpp" />
+    <ClInclude Include="deps\weave-gui\controls\controls.hpp" />
+    <ClInclude Include="deps\weave-gui\gui.hpp" />
+    <ClInclude Include="deps\weave-gui\include.hpp" />
+    <ClInclude Include="deps\weave-gui\instance.hpp" />
+    <ClInclude Include="deps\weave-gui\instance\window.hpp" />
+    <ClInclude Include="deps\weave-gui\messagebox.hpp" />
+    <ClInclude Include="deps\weave-gui\popups\popups.hpp" />
+    <ClInclude Include="deps\weave-gui\renderable.hpp" />
+    <ClInclude Include="deps\weave-gui\render_wrapper.hpp" />
+    <ClInclude Include="deps\weave-gui\resources.hpp" />
+    <ClInclude Include="deps\weave-gui\shapes\shapes.hpp" />
+    <ClInclude Include="deps\weave-gui\style.hpp" />
+    <ClInclude Include="deps\weave-gui\utils\common.hpp" />
+    <ClInclude Include="deps\weave-gui\utils\enums.hpp" />
+    <ClInclude Include="deps\weave-gui\utils\macros.hpp" />
+    <ClInclude Include="sdk\ik_solver.hpp" />
+    <ClInclude Include="sdk\item_definitions.hpp" />
+    <ClInclude Include="src\blur\blur.hpp" />
+    <ClInclude Include="src\features\discord.hpp" />
+    <ClInclude Include="src\features\knifebot.hpp" />
+    <ClInclude Include="src\features\localization.hpp" />
+    <ClInclude Include="src\features\newmenu.hpp" />
+    <ClInclude Include="src\features\network.hpp" />
+    <ClInclude Include="src\features\visuals\hitmarker.hpp" />
+    <ClInclude Include="src\utils\address.hpp" />
+    <ClInclude Include="src\utils\animation_handler.hpp" />
+    <ClInclude Include="sdk\animation_layer.hpp" />
+    <ClInclude Include="sdk\animation_state.hpp" />
+    <ClInclude Include="src\features\hvh\autowall.hpp" />
+    <ClInclude Include="sdk\base_handle.hpp" />
+    <ClInclude Include="src\base_includes.hpp" />
+    <ClInclude Include="sdk\beams.hpp" />
+    <ClInclude Include="src\utils\bits.hpp" />
+    <ClInclude Include="sdk\bspflags.h" />
+    <ClInclude Include="src\features\bullets.hpp" />
+    <ClInclude Include="bytes\hitsound\hit1.h" />
+    <ClInclude Include="bytes\hitsound\hit2.h" />
+    <ClInclude Include="bytes\hitsound\hit3.h" />
+    <ClInclude Include="bytes\hitsound\hit4.h" />
+    <ClInclude Include="bytes\include.hpp" />
+    <ClInclude Include="bytes\root_ui_bold.h" />
+    <ClInclude Include="bytes\smallest_pixel_7.h" />
+    <ClInclude Include="bytes\weapon_icons.h" />
+    <ClInclude Include="src\features\visuals\chams.hpp" />
+    <ClInclude Include="src\cheat.hpp" />
+    <ClInclude Include="sdk\checksum_crc.h" />
+    <ClInclude Include="sdk\class_id.hpp" />
+    <ClInclude Include="sdk\client.hpp" />
+    <ClInclude Include="sdk\client_class.hpp" />
+    <ClInclude Include="sdk\client_state.hpp" />
+    <ClInclude Include="src\utils\color.hpp" />
+    <ClInclude Include="src\utils\constexpr_rand.hpp" />
+    <ClInclude Include="deps\json\json_fwd.hpp" />
+    <ClInclude Include="src\features\visuals\logs.hpp" />
+    <ClInclude Include="src\game\custom_animations.hpp" />
+    <ClInclude Include="deps\json\json.hpp" />
+    <ClInclude Include="src\dump.hpp" />
+    <ClInclude Include="sdk\engine_trace.hpp" />
+    <ClInclude Include="src\features\visuals\esp.hpp" />
+    <ClInclude Include="src\game\events.hpp" />
+    <ClInclude Include="sdk\game_events.hpp" />
+    <ClInclude Include="sdk\game_rules.hpp" />
+    <ClInclude Include="src\globals.hpp" />
+    <ClInclude Include="sdk\convar.hpp" />
+    <ClInclude Include="deps\minhook\buffer.h" />
+    <ClInclude Include="deps\minhook\hde\hde32.h" />
+    <ClInclude Include="deps\minhook\hde\hde64.h" />
+    <ClInclude Include="deps\minhook\hde\pstdint.h" />
+    <ClInclude Include="deps\minhook\hde\table32.h" />
+    <ClInclude Include="deps\minhook\hde\table64.h" />
+    <ClInclude Include="deps\minhook\MinHook.h" />
+    <ClInclude Include="deps\minhook\trampoline.h" />
+    <ClInclude Include="src\game\dormant.hpp" />
+    <ClInclude Include="src\utils\easings.hpp" />
+    <ClInclude Include="sdk\engine_sound.hpp" />
+    <ClInclude Include="sdk\entities.hpp" />
+    <ClInclude Include="sdk\datamap.hpp" />
+    <ClInclude Include="sdk\debug_overlay.hpp" />
+    <ClInclude Include="deps\imgui\imconfig.h" />
+    <ClInclude Include="deps\imgui\imgui.h" />
+    <ClInclude Include="deps\imgui\imgui_freetype.h" />
+    <ClInclude Include="deps\imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="deps\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="deps\imgui\imgui_internal.h" />
+    <ClInclude Include="deps\imgui\imstb_rectpack.h" />
+    <ClInclude Include="deps\imgui\imstb_textedit.h" />
+    <ClInclude Include="deps\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\utils\displacement.hpp" />
+    <ClInclude Include="sdk\engine_client.hpp" />
+    <ClInclude Include="src\game\engine_prediction.hpp" />
+    <ClInclude Include="sdk\entity_list.hpp" />
+    <ClInclude Include="src\features\visuals\esp_utils.hpp" />
+    <ClInclude Include="src\utils\encoding.hpp" />
+    <ClInclude Include="src\utils\fnva1.hpp" />
+    <ClInclude Include="sdk\game_movement.hpp" />
+    <ClInclude Include="sdk\global_vars.hpp" />
+    <ClInclude Include="src\features\visuals\glow_esp.hpp" />
+    <ClInclude Include="sdk\glow_manager.hpp" />
+    <ClInclude Include="src\game\grenades.hpp" />
+    <ClInclude Include="src\features\visuals\grenade_esp.hpp" />
+    <ClInclude Include="src\game\grenade_prediction.hpp" />
+    <ClInclude Include="src\hooks\hooker.hpp" />
+    <ClInclude Include="src\hooks\hooks.hpp" />
+    <ClInclude Include="src\utils\hotkeys.hpp" />
+    <ClInclude Include="src\features\hvh\hvh.hpp" />
+    <ClInclude Include="src\features\visuals\indicators.hpp" />
+    <ClInclude Include="sdk\input.hpp" />
+    <ClInclude Include="src\interfaces.hpp" />
+    <ClInclude Include="src\game\inventory.hpp" />
+    <ClInclude Include="sdk\i_mem_alloc.hpp" />
+    <ClInclude Include="sdk\localize.hpp" />
+    <ClInclude Include="src\features\visuals\local_esp.hpp" />
+    <ClInclude Include="src\macros.hpp" />
+    <ClInclude Include="sdk\material_system.hpp" />
+    <ClInclude Include="src\utils\math.hpp" />
+    <ClInclude Include="src\utils\matrix.hpp" />
+    <ClInclude Include="src\utils\md5.hpp" />
+    <ClInclude Include="src\features\menu.hpp" />
+    <ClInclude Include="src\features\misc.hpp" />
+    <ClInclude Include="sdk\model_cache.hpp" />
+    <ClInclude Include="sdk\model_info.hpp" />
+    <ClInclude Include="sdk\model_render.hpp" />
+    <ClInclude Include="src\features\movement.hpp" />
+    <ClInclude Include="sdk\move_helper.hpp" />
+    <ClInclude Include="src\game\netvar_manager.hpp" />
+    <ClInclude Include="src\game\voice_channel.hpp" />
+    <ClInclude Include="sdk\net_channel.hpp" />
+    <ClInclude Include="src\game\net_data.hpp" />
+    <ClInclude Include="sdk\net_string_container.hpp" />
+    <ClInclude Include="src\utils\nt.hpp" />
+    <ClInclude Include="src\utils\ofs_vector.hpp" />
+    <ClInclude Include="src\game\override_entity_list.hpp" />
+    <ClInclude Include="src\features\hvh\peek_state.hpp" />
+    <ClInclude Include="src\game\players.hpp" />
+    <ClInclude Include="src\features\visuals\player_esp.hpp" />
+    <ClInclude Include="sdk\prediction.hpp" />
+    <ClInclude Include="src\features\hvh\exploits.hpp" />
+    <ClInclude Include="sdk\render_view.hpp" />
+    <ClInclude Include="src\features\visuals\skin_changer.hpp" />
+    <ClInclude Include="src\utils\sha2.hpp" />
+    <ClInclude Include="src\utils\sounds.hpp" />
+    <ClInclude Include="sdk\studio_render.hpp" />
+    <ClInclude Include="src\utils\threading.hpp" />
+    <ClInclude Include="sdk\trace_define.hpp" />
+    <ClInclude Include="sdk\vpanel.hpp" />
+    <ClInclude Include="sdk\physics_surface_props.hpp" />
+    <ClInclude Include="src\utils\obfuscation.hpp" />
+    <ClInclude Include="sdk\recv_props.hpp" />
+    <ClInclude Include="src\render.hpp" />
+    <ClInclude Include="sdk\surface.hpp" />
+    <ClInclude Include="src\utils\utils.hpp" />
+    <ClInclude Include="src\vars.hpp" />
+    <ClInclude Include="src\utils\vector.hpp" />
+    <ClInclude Include="src\utils\vmt.hpp" />
+    <ClInclude Include="src\game\weapons.hpp" />
+    <ClInclude Include="src\features\visuals\weapon_esp.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\blur\Shaders\blur_x.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">blur_x</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)src\blur\Shaders\Build\Debug\blur_x.h</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">blur_x</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)src\blur\Shaders\Build\Release\blur_x.h</HeaderFileOutput>
+    </FxCompile>
+    <FxCompile Include="src\blur\Shaders\blur_y.hlsl">
+      <DeploymentContent>true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <CompileD2DCustomEffect Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileD2DCustomEffect>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">blur_y</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)src\blur\Shaders\Build\Debug\blur_y.h</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">blur_y</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)src\blur\Shaders\Build\Release\blur_y.h</HeaderFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="src\blur\Shaders\default_vs.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Unprotected|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Unprotected|Win32'">Pixel</ShaderType>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">default_vs</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)src\blur\Shaders\Build\Debug\default_vs.h</HeaderFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">default_vs</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)src\blur\Shaders\Build\Release\default_vs.h</HeaderFileOutput>
+    </FxCompile>
+    <FxCompile Include="src\blur\Shaders\glow_line.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Unprotected|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Unprotected|Win32'">Pixel</ShaderType>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glow_line</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)src\blur\Shaders\Build\Debug\glow_line.h</HeaderFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">2.0</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glow_line</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)src\blur\Shaders\Build\Release\glow_line.h</HeaderFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2.0</ShaderModel>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
